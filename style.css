@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #ff6ec7, #3b7d6f);
+    transition: background 0.5s ease;
+    color: white;
+    position: relative;
+}
+
+#color-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-out;
+    margin-bottom: 20px;
+}
+
+#color-example {
+    margin-bottom: 20px;
+}
+
+.color-code {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1em;
+    background-color: #ff6ec7;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #3b7d6f;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#refresh-color {
+    margin-top: 10px;
+}
+
+#copy-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    #color-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .color-code {
+        font-size: 1.2em;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+}
